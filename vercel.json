@@ -1,12 +1,7 @@
 {
     "version": 2,
-    "framework": null,
-
-    "functions": {
-        "api/index.php": {
-            "runtime": "vercel-php@0.7.3"
-        }
-    },
+    "framework": "laravel",
+    "rewrites": [{ "source": "/(.*)", "destination": "/public/index.php" }],
 
     "routes": [
         {
@@ -28,7 +23,7 @@
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "false",
-        "APP_URL": "https://your-app-name.vercel.app",
+        "APP_URL": "https://testing-beta-steel.vercel.app",
 
         "APP_KEY": "base64:3aoCZOAAjO/Ogqonqpv0WbNbGaaCTDs4/21CTfFE2ME=",
 
