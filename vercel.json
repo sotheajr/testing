@@ -1,7 +1,6 @@
 {
     "version": 2,
     "framework": "laravel",
-    "rewrites": [{ "source": "/(.*)", "destination": "/public/index.php" }],
 
     "routes": [
         {
@@ -9,12 +8,12 @@
             "dest": "/public/build/$1"
         },
         {
-            "src": "/(.*\\.(?:css|js|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf))",
+            "src": "/(.*\\.(css|js|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf))",
             "dest": "/public/$1"
         },
         {
             "src": "/(.*)",
-            "dest": "/api/index.php"
+            "dest": "/public/index.php"
         }
     ],
 
