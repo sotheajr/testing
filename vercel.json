@@ -1,6 +1,12 @@
 {
     "version": 2,
-    "framework": "laravel",
+
+    "builds": [
+        {
+            "src": "api/index.php",
+            "use": "@vercel/php"
+        }
+    ],
 
     "routes": [
         {
@@ -13,28 +19,23 @@
         },
         {
             "src": "/(.*)",
-            "dest": "/public/index.php"
+            "dest": "/api/index.php"
         }
     ],
-
-    "outputDirectory": "public",
 
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "false",
         "APP_URL": "https://testing-beta-steel.vercel.app",
-
-        "APP_KEY": "base64:3aoCZOAAjO/Ogqonqpv0WbNbGaaCTDs4/21CTfFE2ME=",
-
-        "APP_CONFIG_CACHE": "/tmp/config.php",
-        "APP_EVENTS_CACHE": "/tmp/events.php",
-        "APP_PACKAGES_CACHE": "/tmp/packages.php",
-        "APP_ROUTES_CACHE": "/tmp/routes.php",
-        "APP_SERVICES_CACHE": "/tmp/services.php",
-        "VIEW_COMPILED_PATH": "/tmp",
+        "APP_KEY": "base64:v3xUsqz8doenMGKUK3IZRUiLZtV6FxP5KCNN0iRKlic=",
 
         "CACHE_DRIVER": "array",
+        "SESSION_DRIVER": "cookie",
         "LOG_CHANNEL": "stderr",
-        "SESSION_DRIVER": "cookie"
+
+        "VIEW_COMPILED_PATH": "/tmp",
+        "APP_CONFIG_CACHE": "/tmp/config.php",
+        "APP_ROUTES_CACHE": "/tmp/routes.php",
+        "APP_SERVICES_CACHE": "/tmp/services.php"
     }
 }
